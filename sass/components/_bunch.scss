@@ -1,0 +1,37 @@
+.photo-bunch {
+  position: relative;
+
+  &__photo {
+    width: 50%;
+    box-shadow: 0 1.5rem 3rem rgba($color-black, 0.5);
+    border-radius: 0.5rem;
+    position: absolute;
+    z-index: 9;
+    transition: all 0.3s ease-in;
+    outline-offset: 1rem;
+
+    &--photo1 {
+      top: -2rem;
+      left: 0;
+    }
+
+    &--photo2 {
+      top: 2rem;
+      right: 3rem;
+    }
+
+    &--photo3 {
+      top: 10rem;
+      left: 20%;
+    }
+
+    &:hover {
+      z-index: 12;
+      transform: scale(1.1);
+    }
+  }
+
+  &:hover &__photo:not(:hover) {
+    transform: scale(0.9);
+  }
+}

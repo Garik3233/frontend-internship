@@ -1,0 +1,21 @@
+.section-two-card {
+  padding: 3rem;
+  border-radius: 5px;
+  box-shadow: 0 1.5rem 3rem rgba($color-black, 0.5);
+  text-align: center;
+  font-size: $default-font-size;
+  background-color: rgba($color-white, 0.7);
+
+  &__icon {
+    display: inline-block;
+    margin-bottom: 0.5rem;
+    color: transparent;
+    font-size: 6rem;
+    background-image: linear-gradient(
+      to right,
+      $color-primary-light,
+      $color-primary-dark
+    );
+    -webkit-background-clip: text;
+  }
+}
