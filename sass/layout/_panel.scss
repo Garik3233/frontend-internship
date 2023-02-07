@@ -5,32 +5,55 @@
 
   &:not(:last-child) {
     margin-bottom: 8rem;
-  }
 
-  .col-1-of-2 {
-    width: calc((100% - #{$gap-rl}) / 2);
-  }
-
-  .col-1-of-3 {
-    width: calc((100% - 2 * #{$gap-rl}) / 3);
-  }
-
-  .col-2-of-3 {
-    width: calc(2 * ((100% - 2 * #{$gap-rl}) / 3) + #{$gap-rl});
-  }
-
-  .col-1-of-4 {
-    width: calc((100% - 3 * #{$gap-rl}) / 4);
-    &:not(:last-child) {
-      margin-right: 6rem;
+    @include respond(tab-port) {
+      margin-bottom: $gap-rl;
     }
   }
 
-  .col-2-of-4 {
-    width: calc(2 * ((100% - 3 * #{$gap-rl}) / 4) + #{$gap-rl});
+  @include respond(tab-port) {
+    max-width: 50rem;
+    padding: 0 3rem;
+    display: flex;
+    flex-direction: column;
   }
+  // @include clearfix;
 
-  .col-3-of-4 {
-    width: calc(3 * ((100% - 3 * #{$gap-rl}) / 4) + 2 * #{$gap-rl});
+  [class^="col-"] {
+    &:not(:last-child) {
+      margin-right: $gap-rl;
+
+      @include respond(tab-port) {
+        margin-right: 0;
+        margin-bottom: $gap-rl;
+      }
+    }
+
+    .col-1-of-2 {
+      width: calc((100% - #{$gap-rl}) / 2);
+    }
+
+    .col-1-of-3 {
+      width: calc((100% - 2 * #{$gap-rl}) / 3);
+    }
+
+    .col-2-of-3 {
+      width: calc(2 * ((100% - 2 * #{$gap-rl}) / 3) + #{$gap-rl});
+    }
+
+    .col-1-of-4 {
+      width: calc((100% - 3 * #{$gap-rl}) / 4);
+      &:not(:last-child) {
+        margin-right: 6rem;
+      }
+    }
+
+    .col-2-of-4 {
+      width: calc(2 * ((100% - 3 * #{$gap-rl}) / 4) + #{$gap-rl});
+    }
+
+    .col-3-of-4 {
+      width: calc(3 * ((100% - 3 * #{$gap-rl}) / 4) + 2 * #{$gap-rl});
+    }
   }
 }

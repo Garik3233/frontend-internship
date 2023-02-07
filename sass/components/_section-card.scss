@@ -5,6 +5,7 @@
   text-align: center;
   font-size: $default-font-size;
   background-color: rgba($color-white, 0.7);
+  transition: transform 0.3s;
 
   &__icon {
     display: inline-block;
@@ -17,5 +18,9 @@
       $color-primary-dark
     );
     -webkit-background-clip: text;
+  }
+
+  &:hover {
+    transform: translateY(-1.3rem) scale(1.07);
   }
 }

@@ -3,6 +3,10 @@
   margin-bottom: 10rem;
   padding: 24rem 0;
   background-color: $color-grey-light;
+
+  @include respond(tab-port) {
+    padding: 19rem 0;
+  }
 }
 
 .section-two {
@@ -18,5 +22,9 @@
 
   & > * {
     transform: skewY(6deg);
+  }
+
+  @include respond(tab-port) {
+    padding: 10rem 0;
   }
 }

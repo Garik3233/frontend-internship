@@ -75,5 +75,11 @@
 
   &:hover {
     transform: translate(3px);
+    background-color: $color-primary;
+    color: $color-white;
+  }
+
+  &:active {
+    transform: translateY(0);
   }
 }

@@ -55,6 +55,11 @@ body {
   color: transparent;
   transition: all 0.3s ease-in-out;
   letter-spacing: 0.2rem;
+
+  &:hover {
+    transform: scale(1.1) skewY(2.5deg) skewX(13deg);
+    text-shadow: 0.5rem 1rem 2rem rgba($color-black, 0.2);
+  }
 }
 
 .headings {
